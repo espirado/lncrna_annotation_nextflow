@@ -1,0 +1,14 @@
+machine:
+    java:
+        version: oraclejdk8
+    services:
+        - docker
+
+dependencies:
+    override:
+
+test:
+    override:
+        - docker pull espirado/lncrna_annotation
+        - curl -fsSL get.nextflow.io | bash
+        - ./nextflow run . -profile test
