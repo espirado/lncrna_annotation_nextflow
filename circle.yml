@@ -12,5 +12,6 @@ dependencies:
 test:
   override:
     - docker pull espirado/lncrna_annotation
+    - docker pull espirado/lncrna_annotation@sha256:1a083056252e6a127f4e3e70750c74aa25c2bc40bed74908c1d79f44531aa963
     - curl -fsSL get.nextflow.io | bash
     - ./nextflow run . -profile test        
